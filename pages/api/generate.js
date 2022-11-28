@@ -17,11 +17,11 @@ const generateAction = async (req, res) => {
     const language = JSON.parse(req.body).language.anchorKey
 
     const baseCompletion = await openai.createCompletion({
-        model: 'text-davinci-002', //the model we're using: may want to change this
+        model: 'text-davinci-003', //the model we're using: may want to change this
         prompt: `$This is ${language} code: ${input} 
         Here I'll explain the code to like you're a freshman computer science student. The following is an explanation that will help you understand what is happening, and HOW the code works overall: `,
-        temperature: 0.5, // can tune these parameters based on what the model needs
-        max_tokens: 600, // can tune these parameters based on what the model needs
+        temperature: 0.7, // can tune these parameters based on what the model needs
+        max_tokens: 400, // can tune these parameters based on what the model needs
         top_p: 1
     });
 
