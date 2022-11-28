@@ -195,7 +195,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: rgb(93, 63, 211);
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
